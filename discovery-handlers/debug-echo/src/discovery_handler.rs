@@ -110,7 +110,7 @@ impl DiscoveryHandler for DiscoveryHandlerImpl {
                         .map(|description| {
                             let mut properties = HashMap::new();
                             properties.insert(
-                                format!(super::DEBUG_ECHO_DESCRIPTION_LABEL.to_string(), hash(instance_name))
+                                format!("{}{}", super::DEBUG_ECHO_DESCRIPTION_LABEL.to_string(), hash(instance_name)),
                                 description.clone(),
                             );
                             Device {
